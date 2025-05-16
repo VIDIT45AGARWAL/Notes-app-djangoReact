@@ -8,9 +8,9 @@ const NoteCard = ({note}) => {
   return (
     <div className="col-md-4 single-note-item all-category">  
       <div className="card card-body">
-        <span className="side-stick" style={{ backgroundColor: color }}></span>
+        <span className="side-stick" style={{ backgroundColor: "blue" }}></span>
         <FaNoteSticky style={{ marginLeft: "auto", color: "blue" }} />
-        <Link to={"notes-detail"} style={{textDecoration: "none", color: "black"}}>
+        <Link to="/notes-detail" style={{textDecoration: "none", color: "black"}}>
         <h5
           className="note-title text-truncate w-75 mb-0"
           data-noteheading="Book a Ticket for Movie"
@@ -32,11 +32,11 @@ const NoteCard = ({note}) => {
        
 
           <span className="d-flex justify-contents-around">
-            <a href="/notes-detail">
+            <Link to="/notes-detail">
               <MdMarkunread
-                style={{ fontSize: "25px", cursor: "pointer", color: color }}
+                style={{ fontSize: "25px", cursor: "pointer", color: "blue" }}
               />
-            </a>
+            </Link>
 
             <small className="text-muted">{note.category}</small>
           </span>
